@@ -11,7 +11,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build proj
         run: |
-          sudo apt-get update && sudo apt-get install -y libgtest-dev
           cmake . -DPATCH_VERSION=${{ github.run_number }}
           cmake --build .
           cmake --build . --target package
