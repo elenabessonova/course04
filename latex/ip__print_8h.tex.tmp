@@ -1,0 +1,134 @@
+\hypertarget{ip__print_8h}{}\doxysection{ip\+\_\+print.\+h File Reference}
+\label{ip__print_8h}\index{ip\_print.h@{ip\_print.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+Include dependency graph for ip\+\_\+print.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{ip__print_8h_abc0ae8e10437b73b846707a773c9c236_abc0ae8e10437b73b846707a773c9c236}{Is\+String}} = std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, std\+::string $>$, bool $>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{ip__print_8h_a5b3602a6505ef71e6341da1355319774_a5b3602a6505ef71e6341da1355319774}{Is\+Int8T}} = std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, int8\+\_\+t $>$, bool $>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{ip__print_8h_a92ef7dfbca42e570e860003f7ab5dabb_a92ef7dfbca42e570e860003f7ab5dabb}{Is\+Int16T}} = std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, int16\+\_\+t $>$, bool $>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{ip__print_8h_af59f8971698972f99a4195ad1b6ccc99_af59f8971698972f99a4195ad1b6ccc99}{Is\+Int32T}} = std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, int32\+\_\+t $>$, bool $>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{ip__print_8h_a0eb081d653294ad85d5109f6a36adb54_a0eb081d653294ad85d5109f6a36adb54}{Is\+Int64T}} = std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ T, int64\+\_\+t $>$, bool $>$
+\item 
+{\footnotesize template$<$template$<$ typename, typename $>$ typename Container, typename U $>$ }\\using \mbox{\hyperlink{ip__print_8h_a2aa1638c1dee4750344e3bcbbb9eb0f0_a2aa1638c1dee4750344e3bcbbb9eb0f0}{Is\+Container}} = std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ Container$<$ U, std\+::allocator$<$ U $>$ $>$, std\+::vector$<$ U, std\+::allocator$<$ U $>$ $>$$>$$\vert$$\vert$std\+::is\+\_\+same\+\_\+v$<$ Container$<$ U, std\+::allocator$<$ U $>$ $>$, std\+::list$<$ U, std\+::allocator$<$ U $>$ $>$$>$, bool $>$
+\item 
+{\footnotesize template$<$template$<$ typename... $>$ typename Container, typename... U$>$ }\\using \mbox{\hyperlink{ip__print_8h_a0d08dfffff7d7a82251813064ad6b04f_a0d08dfffff7d7a82251813064ad6b04f}{Is\+Tuple}} = std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$ Container$<$ U... $>$, std\+::tuple$<$ U... $>$ $>$, bool $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , Is\+String$<$ T $>$  = true$>$ }\\void \mbox{\hyperlink{ip__print_8h_a670afad173021f43295c56b97477ee43_a670afad173021f43295c56b97477ee43}{print\+\_\+ip}} (T \&\&val)
+\begin{DoxyCompactList}\small\item\em print\+\_\+ip for string value \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename, typename $>$ typename Container, typename U , Is\+Container$<$ Container, U $>$  = true$>$ }\\void \mbox{\hyperlink{ip__print_8h_ae0bd39b7fc09f248137f1df8d0028ba0_ae0bd39b7fc09f248137f1df8d0028ba0}{print\+\_\+ip}} (Container$<$ U, std\+::allocator$<$ U $>$$>$ \&\&val)
+\begin{DoxyCompactList}\small\item\em print\+\_\+ip for vector or list \end{DoxyCompactList}\item 
+{\footnotesize template$<$template$<$ typename... $>$ typename Container, typename... U, Is\+Tuple$<$ Container, U... $>$  = true$>$ }\\void \mbox{\hyperlink{ip__print_8h_a6bc44becca30d6fb552c4a1c324f5396_a6bc44becca30d6fb552c4a1c324f5396}{print\+\_\+ip}} (Container$<$ U... $>$ \&\&val)
+\begin{DoxyCompactList}\small\item\em print\+\_\+ip for tuple \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{ip__print_8h_a2aa1638c1dee4750344e3bcbbb9eb0f0_a2aa1638c1dee4750344e3bcbbb9eb0f0}\label{ip__print_8h_a2aa1638c1dee4750344e3bcbbb9eb0f0_a2aa1638c1dee4750344e3bcbbb9eb0f0}} 
+\index{ip\_print.h@{ip\_print.h}!IsContainer@{IsContainer}}
+\index{IsContainer@{IsContainer}!ip\_print.h@{ip\_print.h}}
+\doxysubsubsection{\texorpdfstring{IsContainer}{IsContainer}}
+{\footnotesize\ttfamily template$<$template$<$ typename, typename $>$ typename Container, typename U $>$ \\
+using \mbox{\hyperlink{ip__print_8h_a2aa1638c1dee4750344e3bcbbb9eb0f0_a2aa1638c1dee4750344e3bcbbb9eb0f0}{Is\+Container}} =  std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$Container$<$U, std\+::allocator$<$U$>$ $>$,std\+::vector$<$U, std\+::allocator$<$U$>$ $>$$>$ $\vert$$\vert$ std\+::is\+\_\+same\+\_\+v$<$Container$<$U, std\+::allocator$<$U$>$ $>$,std\+::list$<$U, std\+::allocator$<$U$>$ $>$$>$, bool $>$}
+
+\mbox{\Hypertarget{ip__print_8h_a92ef7dfbca42e570e860003f7ab5dabb_a92ef7dfbca42e570e860003f7ab5dabb}\label{ip__print_8h_a92ef7dfbca42e570e860003f7ab5dabb_a92ef7dfbca42e570e860003f7ab5dabb}} 
+\index{ip\_print.h@{ip\_print.h}!IsInt16T@{IsInt16T}}
+\index{IsInt16T@{IsInt16T}!ip\_print.h@{ip\_print.h}}
+\doxysubsubsection{\texorpdfstring{IsInt16T}{IsInt16T}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{ip__print_8h_a92ef7dfbca42e570e860003f7ab5dabb_a92ef7dfbca42e570e860003f7ab5dabb}{Is\+Int16T}} =  std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$T,int16\+\_\+t$>$, bool $>$}
+
+\mbox{\Hypertarget{ip__print_8h_af59f8971698972f99a4195ad1b6ccc99_af59f8971698972f99a4195ad1b6ccc99}\label{ip__print_8h_af59f8971698972f99a4195ad1b6ccc99_af59f8971698972f99a4195ad1b6ccc99}} 
+\index{ip\_print.h@{ip\_print.h}!IsInt32T@{IsInt32T}}
+\index{IsInt32T@{IsInt32T}!ip\_print.h@{ip\_print.h}}
+\doxysubsubsection{\texorpdfstring{IsInt32T}{IsInt32T}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{ip__print_8h_af59f8971698972f99a4195ad1b6ccc99_af59f8971698972f99a4195ad1b6ccc99}{Is\+Int32T}} =  std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$T,int32\+\_\+t$>$, bool $>$}
+
+\mbox{\Hypertarget{ip__print_8h_a0eb081d653294ad85d5109f6a36adb54_a0eb081d653294ad85d5109f6a36adb54}\label{ip__print_8h_a0eb081d653294ad85d5109f6a36adb54_a0eb081d653294ad85d5109f6a36adb54}} 
+\index{ip\_print.h@{ip\_print.h}!IsInt64T@{IsInt64T}}
+\index{IsInt64T@{IsInt64T}!ip\_print.h@{ip\_print.h}}
+\doxysubsubsection{\texorpdfstring{IsInt64T}{IsInt64T}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{ip__print_8h_a0eb081d653294ad85d5109f6a36adb54_a0eb081d653294ad85d5109f6a36adb54}{Is\+Int64T}} =  std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$T,int64\+\_\+t$>$, bool $>$}
+
+\mbox{\Hypertarget{ip__print_8h_a5b3602a6505ef71e6341da1355319774_a5b3602a6505ef71e6341da1355319774}\label{ip__print_8h_a5b3602a6505ef71e6341da1355319774_a5b3602a6505ef71e6341da1355319774}} 
+\index{ip\_print.h@{ip\_print.h}!IsInt8T@{IsInt8T}}
+\index{IsInt8T@{IsInt8T}!ip\_print.h@{ip\_print.h}}
+\doxysubsubsection{\texorpdfstring{IsInt8T}{IsInt8T}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{ip__print_8h_a5b3602a6505ef71e6341da1355319774_a5b3602a6505ef71e6341da1355319774}{Is\+Int8T}} =  std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$T,int8\+\_\+t$>$, bool $>$}
+
+\mbox{\Hypertarget{ip__print_8h_abc0ae8e10437b73b846707a773c9c236_abc0ae8e10437b73b846707a773c9c236}\label{ip__print_8h_abc0ae8e10437b73b846707a773c9c236_abc0ae8e10437b73b846707a773c9c236}} 
+\index{ip\_print.h@{ip\_print.h}!IsString@{IsString}}
+\index{IsString@{IsString}!ip\_print.h@{ip\_print.h}}
+\doxysubsubsection{\texorpdfstring{IsString}{IsString}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{ip__print_8h_abc0ae8e10437b73b846707a773c9c236_abc0ae8e10437b73b846707a773c9c236}{Is\+String}} =  std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$T,std\+::string$>$, bool $>$}
+
+\mbox{\Hypertarget{ip__print_8h_a0d08dfffff7d7a82251813064ad6b04f_a0d08dfffff7d7a82251813064ad6b04f}\label{ip__print_8h_a0d08dfffff7d7a82251813064ad6b04f_a0d08dfffff7d7a82251813064ad6b04f}} 
+\index{ip\_print.h@{ip\_print.h}!IsTuple@{IsTuple}}
+\index{IsTuple@{IsTuple}!ip\_print.h@{ip\_print.h}}
+\doxysubsubsection{\texorpdfstring{IsTuple}{IsTuple}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ typename Container, typename... U$>$ \\
+using \mbox{\hyperlink{ip__print_8h_a0d08dfffff7d7a82251813064ad6b04f_a0d08dfffff7d7a82251813064ad6b04f}{Is\+Tuple}} =  std\+::enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same\+\_\+v$<$Container$<$U...$>$,std\+::tuple$<$U...$>$ $>$, bool $>$}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ip__print_8h_ae0bd39b7fc09f248137f1df8d0028ba0_ae0bd39b7fc09f248137f1df8d0028ba0}\label{ip__print_8h_ae0bd39b7fc09f248137f1df8d0028ba0_ae0bd39b7fc09f248137f1df8d0028ba0}} 
+\index{ip\_print.h@{ip\_print.h}!print\_ip@{print\_ip}}
+\index{print\_ip@{print\_ip}!ip\_print.h@{ip\_print.h}}
+\doxysubsubsection{\texorpdfstring{print\_ip()}{print\_ip()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$template$<$ typename, typename $>$ typename Container, typename U , Is\+Container$<$ Container, U $>$  = true$>$ \\
+void print\+\_\+ip (\begin{DoxyParamCaption}\item[{Container$<$ U, std\+::allocator$<$ U $>$$>$ \&\&}]{val }\end{DoxyParamCaption})}
+
+
+
+print\+\_\+ip for vector or list 
+
+\mbox{\Hypertarget{ip__print_8h_a6bc44becca30d6fb552c4a1c324f5396_a6bc44becca30d6fb552c4a1c324f5396}\label{ip__print_8h_a6bc44becca30d6fb552c4a1c324f5396_a6bc44becca30d6fb552c4a1c324f5396}} 
+\index{ip\_print.h@{ip\_print.h}!print\_ip@{print\_ip}}
+\index{print\_ip@{print\_ip}!ip\_print.h@{ip\_print.h}}
+\doxysubsubsection{\texorpdfstring{print\_ip()}{print\_ip()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$template$<$ typename... $>$ typename Container, typename... U, Is\+Tuple$<$ Container, U... $>$  = true$>$ \\
+void print\+\_\+ip (\begin{DoxyParamCaption}\item[{Container$<$ U... $>$ \&\&}]{val }\end{DoxyParamCaption})}
+
+
+
+print\+\_\+ip for tuple 
+
+\mbox{\Hypertarget{ip__print_8h_a670afad173021f43295c56b97477ee43_a670afad173021f43295c56b97477ee43}\label{ip__print_8h_a670afad173021f43295c56b97477ee43_a670afad173021f43295c56b97477ee43}} 
+\index{ip\_print.h@{ip\_print.h}!print\_ip@{print\_ip}}
+\index{print\_ip@{print\_ip}!ip\_print.h@{ip\_print.h}}
+\doxysubsubsection{\texorpdfstring{print\_ip()}{print\_ip()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T , Is\+String$<$ T $>$  = true$>$ \\
+void print\+\_\+ip (\begin{DoxyParamCaption}\item[{T \&\&}]{val }\end{DoxyParamCaption})}
+
+
+
+print\+\_\+ip for string value 
+
+print\+\_\+ip for uint32\+\_\+t value
+
+print\+\_\+ip for uint64\+\_\+t value
+
+print\+\_\+ip for uint16\+\_\+t value
+
+print\+\_\+ip for uint8\+\_\+t value 
